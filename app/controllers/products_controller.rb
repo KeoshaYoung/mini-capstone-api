@@ -1,26 +1,26 @@
 class ProductsController < ApplicationController
   def all_products
-    products = Product.all
-    render json: products.as_json
+    product = Product.all
+    render json: product.as_json
   end
 
   def first_product
-    products = Product.first
-    render json: products.as_json
+    product = Product.first
+    render json: product.as_json
   end
 
   def second_product
-    products = Product.second
-    render json: products.as_json
+    product = Product.second
+    render json: product.as_json
   end
 
   def third_product
-    products = Product.find(3)
-    render json: products.as_json
+    product = Product.find(3)
+    render json: product.as_json
   end
 
   def last_product
-    products = Product.last
-    render json: products.as_json
+    product = Product.last
+    render json: product.as_json
   end
 end
