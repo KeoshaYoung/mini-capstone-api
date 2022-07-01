@@ -20,10 +20,17 @@ class ProductsController < ApplicationController
     render json: product.as_json
   end
 
-  # def third_product
-  #   product = Product.find(7)
-  #   render json: product.as_json
-  # end
+  def update
+    product = Product.find_by(id: params["id"])
+
+    product.name = params["name"] || product.name
+    product.price = params["price"] || product.price
+    product.image_url = params["image_url"] || product.image_url
+    product.description = params["description"] || product.description
+
+    product.save
+    render json: product.as_json
+  end
 
   # def last_product
   #   product = Product.find(8)
