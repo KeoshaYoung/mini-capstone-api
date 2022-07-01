@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get "/products/:id", controller: "products", action: "show"
 
-  # get "/second_product", controller: "products", action: "second_product"
+  post "/products", controller: "products", action: "create"
 
   # get "/third_product", controller: "products", action: "third_product"
 
