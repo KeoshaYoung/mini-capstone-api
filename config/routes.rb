@@ -7,7 +7,5 @@ Rails.application.routes.draw do
 
   patch "/products/:id", controller: "products", action: "update"
 
-  # get "/third_product", controller: "products", action: "third_product"
-
-  # get "/last_product", controller: "products", action: "last_product"
+  delete "/products/:id", controller: "products", action: "destroy"
 end
