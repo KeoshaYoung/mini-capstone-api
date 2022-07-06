@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
-    product = Product.all
-    render json: product.as_json
+    @products = Product.all
+    render template: "products/index"
   end
 
   def show
@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    product = Product.new(
+    @product = Product.new(
       name: params["name"],
       price: params["price"],
       image_url: params["image_url"],
