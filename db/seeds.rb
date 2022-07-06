@@ -9,3 +9,6 @@ product.save
 
 product = Product.new(name: "Ancheer Electric Bike", price: "719", image_url: "https://m.media-amazon.com/images/I/71FXwiDM2YS._AC_SL1500_.jpg", description: "The electric bicycle adopts 100 percent lightweight aluminum alloy collapsible frame for quick folding and easy storage. You can have it with minimal storage space and easily store into any vehicle. (The pedal can not be folded.)")
 product.save
+
+product = Product.new(name: "Ancheer Electric Bike for PARTS", price: "5", image_url: "https://m.media-amazon.com/images/I/71FXwiDM2YS._AC_SL1500_.jpg", description: "BROKEN!! The electric bicycle adopts 100 percent lightweight aluminum alloy collapsible frame for quick folding and easy storage. You can have it with minimal storage space and easily store into any vehicle. (The pedal can not be folded.)")
+product.save
