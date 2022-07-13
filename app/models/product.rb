@@ -1,25 +1,29 @@
 class Product < ApplicationRecord
-  def friendly_created_at
-    created_at.strftime("%B %e, %Y")
+  belongs_to :supplier
+  # validates :name, presence: true
+  # validates :name, uniqueness: true
+  # validates :price, presence: true
+  # validates :price, numericality: { greater_than: 0 }
+  # validates :description, presence: true
+  # validates :description, length: { in: 10..500 }
+
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
+
+  def images
+    Image.where(product_id: id)
   end
 
   def is_discounted?
-    if price < 10
-      return true
-    else
-      return false
-    end
+    price <= 10
   end
 
   def tax
-    tax = price * 0.09
+    price * 0.09
   end
 
   def total
-    total = price + tax
-  end
-
-  def supplier
-    Supplier.find_by(id: supplier_id)
+    price + tax
   end
 end

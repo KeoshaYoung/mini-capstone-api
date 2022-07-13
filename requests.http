@@ -1,27 +1,61 @@
-### product index
+### PRODUCTS INDEX
 GET http://localhost:3000/products.json
 
-### product show
-GET http://localhost:3000/products/4.json
-
-### product create
+### PRODUCTS CREATE
 POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "test name", 
-  "price": "test price", 
-  "image_url": "test image_url",
+  "name": "Test name",
+  "price": 32,
   "description": "test description"
 }
 
-### product update
-PATCH http://localhost:3000/products/9.json
+### PRODUCTS SHOW
+GET http://localhost:3000/products/1.json
+
+### PRODUCTS UPDATE
+PATCH http://localhost:3000/products/11.json
 Content-Type: application/json
 
 {
-  "name": "PACE 500 NEXT-GEN Step-Through Ebike"
+  "price": 100
 }
 
-### product destroy
+### PRODUCTS DESTROY
 DELETE http://localhost:3000/products/11.json
+
+### USERS CREATE (SIGNUP)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Test",
+  "email": "test@example.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### SESSIONS CREATE (LOGIN)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "password"
+}
+### ORDERS CREATE
+POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTc4MjIxNTR9.G7LvJNOjD-IFXwK4p-IhcVkZKs_xTXENH6JOhB8MVBU
+Content-Type: application/json
+
+{ 
+  "product_id": 2, 
+  "quantity": 2
+}
+
+### ORDERS SHOW
+GET http://localhost:3000/orders/1.json
+
+### ORDERS INDEX
+GET http://localhost:3000/orders.json
