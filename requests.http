@@ -61,3 +61,17 @@ Authorization: Bearer
 ### ORDERS INDEX
 GET http://localhost:3000/orders.json
 Authorization: Bearer
+
+### CARTED PRODUCTS CREATE
+POST http://localhost:3000/cart.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTgyNTQxNTF9.d7qGlw8C47zK50t_-djXOX6VKeCjiXoU2ulVc7JgkGg
+Content-Type: application/json
+
+{ 
+  "product_id": "2",
+  "quantity":"3"
+}
+
+### CARTED PRODUCTS INDEX
+GET http://localhost:3000/cart.json?status=carted
+
