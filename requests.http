@@ -1,5 +1,5 @@
 ### PRODUCTS INDEX
-GET http://localhost:3000/products.json
+GET http://localhost:3000/products.json?category=Rideable
 
 ### PRODUCTS CREATE
 POST http://localhost:3000/products.json

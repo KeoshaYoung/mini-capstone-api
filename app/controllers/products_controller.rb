@@ -2,8 +2,11 @@ class ProductsController < ApplicationController
   before_action :aunthenticate_admin, except: [:index, :show]
   
   def index
-    @products = Product.all
+    if params [:category]
+      category = Category.find_by(name: params [:category])
+    @products = category.products
     render :index
+    end
   end
 
   def create
